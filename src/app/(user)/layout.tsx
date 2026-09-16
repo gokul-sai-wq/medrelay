@@ -62,15 +62,6 @@ export default function UserLayout({
               )}
             </button>
 
-            {/* High Priority Emergency SOS Button */}
-            <Link 
-               href="/emergency" 
-               className="bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs px-3.5 py-2 rounded-full shadow-md shadow-red-600/30 flex items-center gap-1.5 animate-pulse transition-all shrink-0"
-            >
-               <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
-               🚨 Emergency Mode SOS
-            </Link>
-
             {/* Quick Report Grievance Link */}
             <Link 
                href="/report" 
