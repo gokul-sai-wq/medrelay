@@ -114,14 +114,17 @@ export default function UserLayout({
           </div>
         </div>
 
-        {/* Floating Bottom-Right Emergency SOS Circle Button */}
+        {/* Floating Bottom-Right Emergency SOS Circle Button (High-Visibility Neon Emergency Styling) */}
         <Link 
           href="/emergency" 
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-red-700 hover:bg-red-800 text-white font-bold shadow-md hover:shadow-lg flex flex-col items-center justify-center border border-red-800 transition-all cursor-pointer"
+          className="fixed bottom-6 right-6 z-50 group relative flex items-center justify-center cursor-pointer"
           title="1-Tap Emergency SOS Gateway"
         >
-          <span className="text-base leading-none mb-0.5">🚨</span>
-          <span className="text-[10px] font-extrabold tracking-wider uppercase leading-none text-red-50">SOS</span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+          <div className="relative w-16 h-16 rounded-full bg-gradient-to-r from-red-600 via-rose-600 to-red-600 text-white font-extrabold shadow-2xl shadow-red-600/60 ring-4 ring-red-500/40 hover:ring-red-400 hover:scale-110 active:scale-95 transition-all duration-300 flex flex-col items-center justify-center border-2 border-red-400">
+            <span className="text-lg leading-none mb-0.5 animate-bounce">🚨</span>
+            <span className="text-[10px] font-black tracking-widest uppercase leading-none text-white drop-shadow-sm">SOS</span>
+          </div>
         </Link>
       </main>
     </div>
