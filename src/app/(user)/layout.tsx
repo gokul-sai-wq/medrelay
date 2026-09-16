@@ -123,18 +123,18 @@ export default function UserLayout({
           </div>
         </div>
 
-        {/* Floating Bottom-Right Emergency SOS Button */}
+        {/* Floating Bottom-Right Emergency SOS Circle Button */}
         <Link 
           href="/emergency" 
-          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold text-sm px-5 py-3.5 rounded-full shadow-2xl shadow-red-600/50 flex items-center gap-2.5 ring-4 ring-red-500/30 hover:scale-105 active:scale-95 transition-all group cursor-pointer"
+          className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-tr from-red-600 via-red-500 to-rose-600 text-white font-black shadow-2xl shadow-red-600/60 flex flex-col items-center justify-center ring-4 ring-red-500/30 hover:scale-110 active:scale-95 transition-all group cursor-pointer"
           title="1-Tap Emergency SOS Gateway"
         >
-          <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+          <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-90"></span>
+            <span className="relative inline-flex rounded-full h-4 w-4 bg-white border-2 border-red-600"></span>
           </span>
-          <span className="tracking-wide uppercase text-xs font-black">🚨 1-Tap SOS</span>
-          <span className="bg-red-800/60 text-red-100 text-[10px] font-mono px-2 py-0.5 rounded-full uppercase tracking-wider group-hover:bg-red-900/80 transition-colors">Emergency</span>
+          <span className="text-xl leading-none mb-0.5 group-hover:scale-110 transition-transform">🚨</span>
+          <span className="text-[10px] font-black tracking-wider uppercase leading-none text-red-50">SOS</span>
         </Link>
       </main>
     </div>
