@@ -122,6 +122,20 @@ export default function UserLayout({
             {children}
           </div>
         </div>
+
+        {/* Floating Bottom-Right Emergency SOS Button */}
+        <Link 
+          href="/emergency" 
+          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold text-sm px-5 py-3.5 rounded-full shadow-2xl shadow-red-600/50 flex items-center gap-2.5 ring-4 ring-red-500/30 hover:scale-105 active:scale-95 transition-all group cursor-pointer"
+          title="1-Tap Emergency SOS Gateway"
+        >
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+          </span>
+          <span className="tracking-wide uppercase text-xs font-black">🚨 1-Tap SOS</span>
+          <span className="bg-red-800/60 text-red-100 text-[10px] font-mono px-2 py-0.5 rounded-full uppercase tracking-wider group-hover:bg-red-900/80 transition-colors">Emergency</span>
+        </Link>
       </main>
     </div>
   )
