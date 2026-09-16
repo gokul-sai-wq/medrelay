@@ -205,18 +205,17 @@ export default function HospitalIntakePage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="w-full max-w-7xl mx-auto space-y-6">
       
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">Hospital OPD Intake</h1>
         <p className="text-slate-500 mt-1">Register outpatient walk-ins. Digital ABDM consent or manual registration required.</p>
       </div>
 
-      <Card className="shadow-lg border-2 border-blue-500/20">
-        
-        {/* STAGE 1: CONSENT GATE / MANUAL OVERRIDE ENTRY */}
-        {consentStatus !== "approved" && (
-           <CardContent className="p-8 sm:p-12 text-center space-y-6">
+      {/* STAGE 1: CONSENT GATE / MANUAL OVERRIDE ENTRY */}
+      {consentStatus !== "approved" && (
+         <Card className="shadow-lg border-2 border-blue-500/20 max-w-4xl mx-auto">
+            <CardContent className="p-8 sm:p-12 text-center space-y-6">
               
               {showManualForm ? (
                  <div className="max-w-lg mx-auto text-left space-y-6 animate-in fade-in zoom-in-95">
@@ -384,8 +383,9 @@ export default function HospitalIntakePage() {
                    )}
                  </>
               )}
-           </CardContent>
-        )}
+            </CardContent>
+         </Card>
+      )}
 
         {/* STAGE 2: INTAKE FORM (2-COLUMN LAYOUT) */}
         {consentStatus === "approved" && (
@@ -508,21 +508,23 @@ export default function HospitalIntakePage() {
                    </div>
 
                    {/* Action Buttons */}
-                   <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-4">
+                   <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
                       <Button 
                         disabled={!chiefComplaint}
                         onClick={() => handleComplete("treated")}
-                        className="flex-1 bg-green-600 hover:bg-green-700 text-white py-6 text-base font-bold rounded-xl shadow-lg shadow-green-600/20"
+                        className="flex-1 bg-green-600 hover:bg-green-700 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-lg shadow-green-600/20 whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
                       >
-                         <CheckCircle2 size={20} className="mr-2" /> Mark as Treated (OPD Complete)
+                         <CheckCircle2 size={18} className="mr-2 shrink-0" />
+                         <span>Mark as Treated (OPD Complete)</span>
                       </Button>
 
                       <Button 
                         disabled={!chiefComplaint}
                         onClick={() => handleComplete("admitted")}
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-6 text-base font-bold rounded-xl shadow-lg shadow-blue-600/20"
+                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-lg shadow-blue-600/20 whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
                       >
-                         <UserPlus size={20} className="mr-2" /> Admit Patient to Ward (IPD)
+                         <UserPlus size={18} className="mr-2 shrink-0" />
+                         <span>Admit Patient to Ward (IPD)</span>
                       </Button>
                    </div>
 
@@ -641,8 +643,6 @@ export default function HospitalIntakePage() {
 
            </div>
         )}
-
-      </Card>
 
       {/* DIAGNOSTIC REPORT MODAL */}
       {selectedReportModal && (
