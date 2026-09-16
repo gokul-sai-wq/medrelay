@@ -114,17 +114,18 @@ export default function UserLayout({
           </div>
         </div>
 
-        {/* Floating Bottom-Right Emergency SOS Circle Button (High-Visibility Neon Emergency Styling) */}
+        {/* Floating Bottom-Right Emergency SOS Circle Button */}
         <Link 
           href="/emergency" 
-          className="fixed bottom-6 right-6 z-50 group relative flex items-center justify-center cursor-pointer"
+          className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-tr from-red-600 via-red-500 to-rose-600 text-white font-black shadow-2xl shadow-red-600/60 flex flex-col items-center justify-center ring-4 ring-red-500/30 hover:scale-110 active:scale-95 transition-all group cursor-pointer"
           title="1-Tap Emergency SOS Gateway"
         >
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-          <div className="relative w-16 h-16 rounded-full bg-gradient-to-r from-red-600 via-rose-600 to-red-600 text-white font-extrabold shadow-2xl shadow-red-600/60 ring-4 ring-red-500/40 hover:ring-red-400 hover:scale-110 active:scale-95 transition-all duration-300 flex flex-col items-center justify-center border-2 border-red-400">
-            <span className="text-lg leading-none mb-0.5 animate-bounce">🚨</span>
-            <span className="text-[10px] font-black tracking-widest uppercase leading-none text-white drop-shadow-sm">SOS</span>
-          </div>
+          <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-90"></span>
+            <span className="relative inline-flex rounded-full h-4 w-4 bg-white border-2 border-red-600"></span>
+          </span>
+          <span className="text-xl leading-none mb-0.5 group-hover:scale-110 transition-transform">🚨</span>
+          <span className="text-[10px] font-black tracking-wider uppercase leading-none text-red-50">SOS</span>
         </Link>
       </main>
     </div>
