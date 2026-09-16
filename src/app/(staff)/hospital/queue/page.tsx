@@ -457,7 +457,7 @@ export default function HospitalQueuePage() {
                            <Button 
                               size="sm"
                               onClick={() => handleConfirmAppointment(req)}
-                              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 shadow-md shadow-indigo-600/20"
+                              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 shadow-md"
                            >
                               <Check size={16} className="mr-1" /> 
                               {isConfirmed ? "Update Schedule Time" : "Accept & Confirm Schedule"}
@@ -499,7 +499,7 @@ export default function HospitalQueuePage() {
                   
                   {nextPatient && (
                      <div className="mt-8">
-                        <Button onClick={() => setActivePatient(nextPatient)} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-xl shadow-blue-600/20 group">
+                        <Button onClick={() => setActivePatient(nextPatient)} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-xl group">
                            <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> Process Patient
                         </Button>
                      </div>

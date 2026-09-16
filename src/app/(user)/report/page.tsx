@@ -154,7 +154,7 @@ function ReportForm() {
       {submittedGrievance && (
         <div className="bg-emerald-50 border-2 border-emerald-400 rounded-2xl p-6 text-emerald-950 shadow-md animate-in zoom-in-95 duration-200">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-md shadow-emerald-500/30">
+            <div className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center shrink-0 shadow-sm">
               <CheckCircle2 size={28} />
             </div>
             <div className="space-y-1 flex-1">
@@ -258,8 +258,8 @@ function ReportForm() {
                       onClick={() => setSeverity(sev)}
                       className={`py-3 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
                         severity === sev 
-                          ? sev === "Critical" ? "bg-red-600 text-white border-red-600 shadow-md shadow-red-600/30"
-                            : sev === "High" ? "bg-amber-600 text-white border-amber-600 shadow-md shadow-amber-600/30"
+                          ? sev === "Critical" ? "bg-red-700 text-white border-red-700 shadow-sm"
+                            : sev === "High" ? "bg-amber-700 text-white border-amber-700 shadow-sm"
                             : "bg-slate-900 text-white border-slate-900"
                           : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
                       }`}
@@ -371,7 +371,7 @@ function ReportForm() {
               </div>
               <Button
                 type="submit"
-                className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-extrabold px-8 py-6 rounded-xl shadow-lg shadow-red-600/20 text-base flex items-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto bg-red-700 hover:bg-red-800 text-white font-bold px-8 py-6 rounded-xl shadow-md text-base flex items-center gap-2 cursor-pointer"
               >
                 <Send size={18} />
                 Submit Official Report to District Command

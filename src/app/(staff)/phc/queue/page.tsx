@@ -472,7 +472,7 @@ export default function PHCQueuePage() {
                            <Button 
                               size="sm"
                               onClick={() => handleConfirmAppointment(req)}
-                              className="bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 shadow-md shadow-teal-600/20"
+                              className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-6 shadow-sm"
                            >
                               <Check size={16} className="mr-1" /> 
                               {isConfirmed ? "Update Schedule Time" : "Accept & Confirm Schedule"}
@@ -488,15 +488,15 @@ export default function PHCQueuePage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
          {/* Live Action Board */}
          <div className="md:col-span-2 space-y-6">
-            <Card className="shadow-lg border-2 border-teal-500 overflow-hidden relative">
+            <Card className="shadow-md border border-teal-200 overflow-hidden relative">
                <div className="absolute top-0 right-0 p-4 opacity-10">
                   <Users size={120} />
                </div>
                <CardContent className="p-8 relative z-10">
                   <div className="flex items-start justify-between">
                      <div>
-                        <div className="text-sm font-bold text-teal-600 uppercase tracking-wider mb-2 flex items-center gap-2">
-                           <span className="w-2.5 h-2.5 rounded-full bg-teal-500 animate-pulse"></span>
+                        <div className="text-sm font-bold text-teal-700 uppercase tracking-wider mb-2 flex items-center gap-2">
+                           <span className="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
                            Now Serving
                         </div>
                         {nextPatient ? (
@@ -514,8 +514,8 @@ export default function PHCQueuePage() {
                   
                   {nextPatient && (
                      <div className="mt-8">
-                        <Button onClick={() => setActivePatient(nextPatient)} className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-6 text-lg rounded-xl shadow-xl shadow-teal-600/20 group">
-                           <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> Process Patient
+                        <Button onClick={() => setActivePatient(nextPatient)} className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-6 text-lg rounded-xl shadow-sm group">
+                           <Play className="w-5 h-5 mr-2" /> Process Patient
                         </Button>
                      </div>
                   )}

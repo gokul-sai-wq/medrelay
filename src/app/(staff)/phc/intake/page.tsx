@@ -324,7 +324,7 @@ export default function PHCIntakePage() {
                           </Button>
                           <Button 
                              type="submit" 
-                             className="flex-1 py-5 text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/20"
+                             className="flex-1 py-5 text-sm font-bold bg-teal-700 hover:bg-teal-800 text-white shadow-sm"
                           >
                              Proceed to Intake
                           </Button>
@@ -348,7 +348,7 @@ export default function PHCIntakePage() {
                             placeholder="Enter Patient Unique Code (e.g. PT-8891)"
                             value={consentCode}
                             onChange={e => setConsentCode(e.target.value.toUpperCase())}
-                            className="w-full text-center text-xl p-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-teal-500 font-mono font-bold bg-slate-50 uppercase tracking-widest"
+                            className="w-full text-center text-xl p-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-teal-600 font-mono font-bold bg-slate-50 uppercase tracking-widest"
                           />
                           <div className="flex items-center justify-center gap-2">
                             <span className="text-xs text-slate-400 font-medium">Testing demo?</span>
@@ -365,7 +365,7 @@ export default function PHCIntakePage() {
                           </div>
                         </div>
 
-                        <Button disabled={!consentCode} onClick={() => handleRequestConsent()} className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-xl shadow-lg shadow-teal-600/20 font-bold">
+                        <Button disabled={!consentCode} onClick={() => handleRequestConsent()} className="w-full bg-teal-700 hover:bg-teal-800 text-white py-6 text-lg rounded-xl shadow-sm font-bold">
                            Request Access
                         </Button>
                         <div>
@@ -527,7 +527,7 @@ export default function PHCIntakePage() {
                       <Button 
                         disabled={!chiefComplaint}
                         onClick={() => handleComplete("treated")}
-                        className="flex-1 bg-green-600 hover:bg-green-700 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-lg shadow-green-600/20 whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
+                        className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-sm whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
                       >
                          <CheckCircle2 size={18} className="mr-2 shrink-0" />
                          <span>Mark as Treated (OPD Complete)</span>
@@ -536,7 +536,7 @@ export default function PHCIntakePage() {
                       <Button 
                         disabled={!chiefComplaint}
                         onClick={() => handleComplete("referred")}
-                        className="flex-1 bg-teal-600 hover:bg-teal-700 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-lg shadow-teal-600/20 whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
+                        className="flex-1 bg-teal-700 hover:bg-teal-800 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-sm whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
                       >
                          <ArrowRight size={18} className="mr-2 shrink-0" />
                          <span>Refer to Indira Gandhi Govt Hospital</span>

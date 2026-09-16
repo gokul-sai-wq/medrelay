@@ -150,8 +150,8 @@ export function ConsentBanner() {
     >
       <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden animate-in zoom-in-95 duration-200">
         
-        {/* Top Header Glow Bar */}
-        <div className="h-2.5 w-full bg-gradient-to-r from-teal-500 via-indigo-500 to-amber-500 animate-pulse" />
+        {/* Top Header Bar */}
+        <div className="h-2 w-full bg-slate-800" />
 
         <div className="p-6 sm:p-8 space-y-6">
           
@@ -159,17 +159,16 @@ export function ConsentBanner() {
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-600/30">
-                  <ShieldCheck size={28} className="animate-bounce" />
+                <div className="w-12 h-12 rounded-2xl bg-indigo-700 text-white flex items-center justify-center shadow-sm">
+                  <ShieldCheck size={28} />
                 </div>
                 <span className="absolute -top-1 -right-1 flex h-4 w-4">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-4 w-4 bg-amber-500 text-[9px] text-white font-bold items-center justify-center">!</span>
                 </span>
               </div>
               <div>
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-indigo-50 text-indigo-700 border border-indigo-200">
-                  <BellRing size={11} className="text-indigo-600 animate-pulse" /> Live Access Request
+                  <BellRing size={11} className="text-indigo-600" /> Live Access Request
                 </div>
                 <h3 id="consent-modal-title" className="text-xl font-black text-slate-900 mt-1">
                   Health Record Access
@@ -210,16 +209,16 @@ export function ConsentBanner() {
             <button
               type="button"
               onClick={() => handleConsent("declined")}
-              className="w-full py-3.5 px-4 rounded-xl border-2 border-rose-200 bg-white hover:bg-rose-50 text-rose-700 font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-xs active:scale-98 cursor-pointer"
+              className="w-full py-3.5 px-4 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
             >
-              <XCircle size={18} className="text-rose-600" />
+              <XCircle size={18} className="text-slate-600" />
               <span>Reject / Decline</span>
             </button>
 
             <button
               type="button"
               onClick={() => handleConsent("approved")}
-              className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-extrabold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-teal-600/25 active:scale-98 cursor-pointer"
+              className="w-full py-3.5 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
             >
               <ShieldCheck size={18} className="text-white" />
               <span>Accept & Approve</span>

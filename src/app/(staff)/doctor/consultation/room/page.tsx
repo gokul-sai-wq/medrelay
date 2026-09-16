@@ -179,7 +179,7 @@ export default function DoctorConsultationRoom() {
             <button onClick={toggleVideo} className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${isVideoOff ? 'bg-red-500/20 text-red-500 hover:bg-red-500/30' : 'bg-slate-700 text-white hover:bg-slate-600'}`}>
               {isVideoOff ? <VideoOff size={20} /> : <Video size={20} />}
             </button>
-            <button onClick={endCall} className="w-14 h-14 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center shadow-lg shadow-red-600/20 transition-all hover:scale-105">
+            <button onClick={endCall} className="w-14 h-14 rounded-full bg-red-700 hover:bg-red-800 text-white flex items-center justify-center shadow-md transition-all">
               <PhoneOff size={24} />
             </button>
           </div>

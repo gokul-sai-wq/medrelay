@@ -171,9 +171,9 @@ export default function AdvancedTriagePage() {
   }
 
   const levelStyles = {
-    emergency: "bg-red-50 border-red-200 text-red-900 shadow-red-500/20",
-    urgent: "bg-amber-50 border-amber-200 text-amber-900 shadow-amber-500/20",
-    routine: "bg-teal-50 border-teal-200 text-teal-900 shadow-teal-500/20",
+    emergency: "bg-red-50 border-red-200 text-red-900 shadow-sm",
+    urgent: "bg-amber-50 border-amber-200 text-amber-900 shadow-sm",
+    routine: "bg-teal-50 border-teal-200 text-teal-900 shadow-sm",
   } as const
 
   const totalSteps = 4
@@ -348,9 +348,9 @@ export default function AdvancedTriagePage() {
                     const isActive = painLevel === level;
                     let colorClass = "bg-slate-100 text-slate-600 hover:bg-slate-200 border-transparent";
                     if (isActive) {
-                       if (level <= 3) colorClass = "bg-teal-500 text-white shadow-lg shadow-teal-500/30 border-teal-600 scale-110 z-10";
-                       else if (level <= 7) colorClass = "bg-amber-500 text-white shadow-lg shadow-amber-500/30 border-amber-600 scale-110 z-10";
-                       else colorClass = "bg-red-500 text-white shadow-lg shadow-red-500/30 border-red-600 scale-110 z-10";
+                       if (level <= 3) colorClass = "bg-teal-700 text-white shadow-sm border-teal-800 scale-105 z-10";
+                       else if (level <= 7) colorClass = "bg-amber-600 text-white shadow-sm border-amber-700 scale-105 z-10";
+                       else colorClass = "bg-red-700 text-white shadow-sm border-red-800 scale-105 z-10";
                     }
 
                     return (
@@ -491,7 +491,7 @@ export default function AdvancedTriagePage() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <Link href={result.action.href} className="w-full sm:w-auto">
-                  <Button className={`w-full sm:w-auto px-8 py-6 text-lg font-bold rounded-xl shadow-lg transition-all hover:scale-105 ${result.level === 'emergency' ? 'bg-red-600 hover:bg-red-700 text-white shadow-red-600/20' : result.level === 'urgent' ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-amber-600/20' : 'bg-teal-600 hover:bg-teal-700 text-white shadow-teal-600/20'}`}>
+                  <Button className={`w-full sm:w-auto px-8 py-6 text-lg font-bold rounded-xl shadow-md transition-all hover:scale-102 ${result.level === 'emergency' ? 'bg-red-700 hover:bg-red-800 text-white' : result.level === 'urgent' ? 'bg-amber-700 hover:bg-amber-800 text-white' : 'bg-teal-700 hover:bg-teal-800 text-white'}`}>
                     <Stethoscope className="w-5 h-5 mr-2" /> {result.action.label}
                   </Button>
                 </Link>

@@ -309,7 +309,7 @@ export default function HospitalIntakePage() {
                           </Button>
                           <Button 
                              type="submit" 
-                             className="flex-1 py-5 text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-600/20"
+                             className="flex-1 py-5 text-sm font-bold bg-indigo-700 hover:bg-indigo-800 text-white shadow-sm"
                           >
                              Proceed to Intake
                           </Button>
@@ -333,7 +333,7 @@ export default function HospitalIntakePage() {
                             placeholder="Enter Patient Unique Code (e.g. PT-8891)"
                             value={consentCode}
                             onChange={e => setConsentCode(e.target.value.toUpperCase())}
-                            className="w-full text-center text-xl p-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 font-mono font-bold bg-slate-50 uppercase tracking-widest"
+                            className="w-full text-center text-xl p-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-indigo-600 font-mono font-bold bg-slate-50 uppercase tracking-widest"
                           />
                           <div className="flex items-center justify-center gap-2">
                             <span className="text-xs text-slate-400 font-medium">Testing demo?</span>
@@ -343,14 +343,14 @@ export default function HospitalIntakePage() {
                                 setConsentCode("PT-8891")
                                 handleRequestConsent("PT-8891")
                               }}
-                              className="text-xs font-bold text-blue-700 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 border border-blue-200 px-3 py-1 rounded-full transition-all cursor-pointer shadow-xs"
+                              className="text-xs font-bold text-indigo-700 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 px-3 py-1 rounded-full transition-all cursor-pointer shadow-xs"
                             >
                               ⚡ Auto-Fill & Request: PT-8891
                             </button>
                           </div>
                         </div>
 
-                        <Button disabled={!consentCode} onClick={() => handleRequestConsent()} className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-lg rounded-xl shadow-lg shadow-blue-600/20 font-bold">
+                        <Button disabled={!consentCode} onClick={() => handleRequestConsent()} className="w-full bg-indigo-700 hover:bg-indigo-800 text-white py-6 text-lg rounded-xl shadow-sm font-bold">
                            Request Access
                         </Button>
                         <div>
@@ -512,7 +512,7 @@ export default function HospitalIntakePage() {
                       <Button 
                         disabled={!chiefComplaint}
                         onClick={() => handleComplete("treated")}
-                        className="flex-1 bg-green-600 hover:bg-green-700 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-lg shadow-green-600/20 whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
+                        className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-sm whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
                       >
                          <CheckCircle2 size={18} className="mr-2 shrink-0" />
                          <span>Mark as Treated (OPD Complete)</span>
@@ -521,7 +521,7 @@ export default function HospitalIntakePage() {
                       <Button 
                         disabled={!chiefComplaint}
                         onClick={() => handleComplete("admitted")}
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-lg shadow-blue-600/20 whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
+                        className="flex-1 bg-indigo-700 hover:bg-indigo-800 text-white h-auto py-3.5 px-4 text-xs sm:text-sm font-bold leading-snug rounded-xl shadow-sm whitespace-normal text-center flex items-center justify-center min-w-0 shrink"
                       >
                          <UserPlus size={18} className="mr-2 shrink-0" />
                          <span>Admit Patient to Ward (IPD)</span>
