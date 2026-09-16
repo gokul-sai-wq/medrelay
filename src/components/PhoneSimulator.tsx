@@ -18,7 +18,7 @@ export function PhoneSimulator({ messages, onDismiss }: PhoneSimulatorProps) {
   if (messages.length === 0) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100] w-80 space-y-3 flex flex-col items-end">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[100] max-w-[calc(100vw-2rem)] w-80 space-y-3 flex flex-col items-end">
       {messages.map((msg) => (
         <div 
           key={msg.id} 
