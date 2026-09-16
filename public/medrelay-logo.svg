@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" fill="none">
+  <defs>
+    <linearGradient id="medGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5841D8" />
+      <stop offset="100%" stop-color="#00A884" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#5841D8" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Shield Badge with Medical Cross -->
+  <g filter="url(#shadow)">
+    <rect x="10" y="10" width="70" height="70" rx="20" fill="url(#medGrad)" />
+    <!-- Medical Cross -->
+    <path d="M45 28v34M28 45h34" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
+    <circle cx="45" cy="45" r="4" fill="#ffffff" />
+  </g>
+
+  <!-- Typography: MedRelay -->
+  <text x="95" y="55" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="44" fill="#0F172A" letter-spacing="-1">Med<tspan fill="url(#medGrad)">Relay</tspan></text>
+  <!-- Tagline -->
+  <text x="96" y="73" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="#64748B" letter-spacing="1.5">RURAL HEALTH NETWORK</text>
+</svg>
