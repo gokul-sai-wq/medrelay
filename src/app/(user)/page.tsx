@@ -265,7 +265,7 @@ export default function MedRelayAIPage() {
                 >
                   {LANGUAGES.map(l => (
                     <option key={l.code} value={l.code}>
-                      {l.label}
+                      {l.nativeLabel}
                     </option>
                   ))}
                 </select>

@@ -99,7 +99,7 @@ export default function SettingsPage() {
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-900"
               >
                 {LANGUAGES.map(l => (
-                  <option key={l.code} value={l.code}>{l.label}</option>
+                  <option key={l.code} value={l.code}>{l.nativeLabel}</option>
                 ))}
               </select>
               <p className="text-xs text-slate-400 mt-2">Navigation and key screens switch immediately. Full-app translation is expanding to cover every screen.</p>

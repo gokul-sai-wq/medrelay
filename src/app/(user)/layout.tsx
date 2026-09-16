@@ -207,7 +207,7 @@ export default function UserLayout({
               >
                 {LANGUAGES.map(l => (
                   <option key={l.code} value={l.code}>
-                    {l.code.toUpperCase()}
+                    {l.nativeLabel}
                   </option>
                 ))}
               </select>

@@ -6,30 +6,30 @@ export type LangCode =
   "en" | "hi" | "mr" | "ta" | "te" | "kn" | "bn" | "gu" | "pa" | "ml" | "or" |
   "as" | "brx" | "doi" | "ks" | "kok" | "mai" | "mni" | "ne" | "sa" | "sat" | "sd" | "ur"
 
-export const LANGUAGES: { code: LangCode; label: string }[] = [
-  { code: "en", label: "English" },
-  { code: "as", label: "অসমীয়া (Assamese)" },
-  { code: "bn", label: "বাংলা (Bengali)" },
-  { code: "brx", label: "बड़ो (Bodo)" },
-  { code: "doi", label: "डोगरी (Dogri)" },
-  { code: "gu", label: "ગુજરાતી (Gujarati)" },
-  { code: "hi", label: "हिन्दी (Hindi)" },
-  { code: "kn", label: "ಕನ್ನಡ (Kannada)" },
-  { code: "ks", label: "कॉशुर / کٲشُر (Kashmiri)" },
-  { code: "kok", label: "कोंकणी (Konkani)" },
-  { code: "mai", label: "मैथिली (Maithili)" },
-  { code: "ml", label: "മലയാളം (Malayalam)" },
-  { code: "mni", label: "মৈতৈলোন্ (Manipuri)" },
-  { code: "mr", label: "मराठी (Marathi)" },
-  { code: "ne", label: "नेपाली (Nepali)" },
-  { code: "or", label: "ଓଡ଼ିଆ (Odia)" },
-  { code: "pa", label: "ਪੰਜਾਬੀ (Punjabi)" },
-  { code: "sa", label: "संस्कृतम् (Sanskrit)" },
-  { code: "sat", label: "ᱥᱟᱱᱛᱟᱲᱤ (Santali)" },
-  { code: "sd", label: "سنڌي (Sindhi)" },
-  { code: "ta", label: "தமிழ் (Tamil)" },
-  { code: "te", label: "తెలుగు (Telugu)" },
-  { code: "ur", label: "اردو (Urdu)" }
+export const LANGUAGES: { code: LangCode; label: string; nativeLabel: string }[] = [
+  { code: "en", label: "English", nativeLabel: "English" },
+  { code: "ta", label: "தமிழ் (Tamil)", nativeLabel: "தமிழ்" },
+  { code: "hi", label: "हिन्दी (Hindi)", nativeLabel: "हिन्दी" },
+  { code: "te", label: "తెలుగు (Telugu)", nativeLabel: "తెలుగు" },
+  { code: "kn", label: "ಕನ್ನಡ (Kannada)", nativeLabel: "ಕನ್ನಡ" },
+  { code: "ml", label: "മലയാളം (Malayalam)", nativeLabel: "മലയാളം" },
+  { code: "mr", label: "मराठी (Marathi)", nativeLabel: "मराठी" },
+  { code: "bn", label: "বাংলা (Bengali)", nativeLabel: "বাংলা" },
+  { code: "gu", label: "ગુજરાતી (Gujarati)", nativeLabel: "ગુજરાતી" },
+  { code: "pa", label: "ਪੰਜਾਬੀ (Punjabi)", nativeLabel: "ਪੰਜਾਬੀ" },
+  { code: "or", label: "ଓଡ଼ିଆ (Odia)", nativeLabel: "ଓଡ଼ିଆ" },
+  { code: "as", label: "অসমীয়া (Assamese)", nativeLabel: "অসমীয়া" },
+  { code: "brx", label: "बड़ो (Bodo)", nativeLabel: "बड़ो" },
+  { code: "doi", label: "डोगरी (Dogri)", nativeLabel: "डोगरी" },
+  { code: "ks", label: "कॉशुर (Kashmiri)", nativeLabel: "कॉशुर" },
+  { code: "kok", label: "कोंकणी (Konkani)", nativeLabel: "कोंकणी" },
+  { code: "mai", label: "मैथिली (Maithili)", nativeLabel: "मैथिली" },
+  { code: "mni", label: "মৈতৈলোন্ (Manipuri)", nativeLabel: "মৈতৈলোন্" },
+  { code: "ne", label: "नेपाली (Nepali)", nativeLabel: "नेपाली" },
+  { code: "sa", label: "संस्कृतम् (Sanskrit)", nativeLabel: "संस्कृतम्" },
+  { code: "sat", label: "ᱥᱟᱱᱛᱟᱲᱤ (Santali)", nativeLabel: "ᱥᱟᱱᱛᱟᱲᱤ" },
+  { code: "sd", label: "سنڌي (Sindhi)", nativeLabel: "سنڌي" },
+  { code: "ur", label: "اردو (Urdu)", nativeLabel: "اردو" }
 ]
 
 const DICT: Record<string, Record<LangCode, string>> = {
